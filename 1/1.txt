@@ -1,0 +1,37 @@
+--> insert data for table `contact us`
+
+INSERT INTO `contact us` (`id`, `name`, `email`, `title`, `text`) VALUES
+(1, 'ahmad', 'ahmad@gmail.com', 'matn', 'Test'),
+(3, 'hosein', 'hosein@gmail.com', 'test', 'Test');
+
+DELETE FROM `contact us` WHERE id=2
+
+..................................................................................
+
+--> insert data for table `user`
+
+INSERT INTO `user` (`id`, `firstname`, `lastname`, `email`, `password`, `status`) VALUES
+(1, 'ali', 'kamali', 'ali@gmail.com', '0000', 'active'),
+(2, 'mohamad', 'mahdiyan', 'mohamad@gmail.com', '00009090', 'deactive'),
+(3, 'mahdi', 'akbari', 'mahdi@gmail.com', '112233', 'deactive');
+COMMIT;
+
+DELETE FROM `user` WHERE id=3
+
+................................................................................................................
+
+SOFT DELETE
+
+INSERT INTO `user`(`firstname`, `lastname`, `email`, `password`, `status`) 
+VALUES ('mahdi', 'akbari', 'mahdi@gmail.com', '112233', 'deactive')
+
+INSERT INTO `user`(`firstname`, `lastname`, `email`, `password`, `status`) 
+VALUES ('mohamad', 'mahdiyan', 'mohamad@gmail.com', '00009090', 'active')
+
+SELECT * FROM `user` WHERE status='active'
+
+mohamad
+mahdiyan
+mohamad@gmail.com
+00009090
+active
