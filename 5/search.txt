@@ -1,0 +1,2 @@
+SELECT * FROM product
+WHEREa name LIKE '`nameSearch`%';
