@@ -1,0 +1,2 @@
+CREATE UNIQUE INDEX code_product
+ON product (column1, column2, ...);
